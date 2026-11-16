@@ -15,7 +15,7 @@
 
 	"vars": {
 		// This repository. The agent clones it before every run and keeps only its agent/ folder.
-		"AGENT_REPO": "https://github.com/<you>/how-to-build-an-agent.git",
+		"AGENT_REPO": "https://github.com/andyjessop/how-to-build-an-agent.git",
 	},
 
 	// The shop, the page the agent reports to, and the agent.

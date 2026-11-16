@@ -11,7 +11,7 @@ export { Notifications } from "./notifications";
 
 // Everything this agent is: which skill to start, when, and with which model.
 const SKILL = "diagnose-outage";
-const SCHEDULE = "*/15 * * * *"; // every 15 minutes
+const SCHEDULE = "*/1 * * * *"; // every 15 minutes
 const MODEL = "@cf/moonshotai/kimi-k2.7-code";
 
 // Where the agent's folder goes inside the container.

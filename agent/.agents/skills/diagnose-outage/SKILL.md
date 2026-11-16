@@ -19,6 +19,6 @@ This skill does no work of its own. It combines four other skills.
    - the evidence
    - the most likely cause
    - what still works
-7. Use the `send-notification` skill to send it. For the title, name the problem in six words or fewer.
+7. Use the `send-notification` skill to send it. For the title, name the problem in six words or fewer. End the message with a one-line biscuit pun.
 
 Finish by showing what you found.
