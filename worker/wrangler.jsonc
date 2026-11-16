@@ -1,0 +1,42 @@
+{
+	"$schema": "../node_modules/wrangler/config-schema.json",
+	"name": "biscuit-shop",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-11-14",
+	"compatibility_flags": ["nodejs_compat"],
+	"observability": {
+		"enabled": true,
+	},
+
+	// The model runs on Workers AI, so there is no API key to manage.
+	"ai": {
+		"binding": "AI",
+	},
+
+	"vars": {
+		// This repository. The agent clones it before every run and keeps only its agent/ folder.
+		"AGENT_REPO": "https://github.com/<you>/how-to-build-an-agent.git",
+	},
+
+	// The shop, the page the agent reports to, and the agent.
+	"durable_objects": {
+		"bindings": [
+			{ "name": "Site", "class_name": "Site" },
+			{ "name": "Notifications", "class_name": "Notifications" },
+			{ "name": "SkillsAgent", "class_name": "SkillsAgent" },
+		],
+	},
+	"migrations": [
+		{ "tag": "v1", "new_sqlite_classes": ["Site", "Notifications"] },
+		{ "tag": "v2", "new_sqlite_classes": ["SkillsAgent"] },
+	],
+
+	// The agent has a container attached, where the skills' commands run.
+	"containers": [
+		{
+			"class_name": "SkillsAgent",
+			"scheduling_policy": "durable_object",
+			"images": { "app": { "dockerfile": "./Dockerfile" } },
+		},
+	],
+}

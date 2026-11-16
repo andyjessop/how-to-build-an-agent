@@ -1,0 +1,22 @@
+{
+	"name": "worker",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"cf-typegen": "wrangler types"
+	},
+	"devDependencies": {
+		"typescript": "^5.5.2",
+		"wrangler": "^4"
+	},
+	"dependencies": {
+		"@earendil-works/chord": "~1.5.2",
+		"@earendil-works/pi-ai": "~1.5.2",
+		"@earendil-works/pi-durable": "~1.5.2",
+		"@earendil-works/pi-schema": "~1.5.2",
+		"agents": "^0.33.0"
+	}
+}

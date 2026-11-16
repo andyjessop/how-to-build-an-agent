@@ -1,0 +1,13 @@
+{
+	"name": "how-to-build-an-agent",
+	"private": true,
+	"workspaces": ["worker"],
+	"scripts": {
+		"dev": "npm run dev --workspace worker",
+		"break": "./demo.sh break",
+		"fix": "./demo.sh fix",
+		"agent": "./demo.sh agent",
+		"claude": "./demo.sh claude",
+		"pi": "./demo.sh pi"
+	}
+}

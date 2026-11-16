@@ -1,0 +1,10 @@
+# Copy this file to .dev.vars for local development. .dev.vars is not committed.
+
+# The key for breaking and fixing the shop, and for starting the agent by hand.
+ADMIN_KEY=dev
+
+# The key for posting to the notifications page.
+NOTIFY_KEY=dev-notify
+
+# Inside the agent's container, this machine is host.docker.internal, not localhost.
+SITE_URL=http://host.docker.internal:8787
